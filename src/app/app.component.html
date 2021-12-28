@@ -1,0 +1,25 @@
+<div class="sample-app__root-container">
+  <mat-toolbar color="primary" class="example-toolbar">
+    <button mat-icon-button (click)="snav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1 class="example-app-name">Sample App</h1>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="sample-app__content">
+    <mat-sidenav #snav [mode]="'over'">
+      <mat-nav-list>
+        <a
+          class="sample-app__side-nav-item"
+          routerLink="/first"
+          routerLinkActive="active"
+          >First Component</a
+        >
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="sample-app__content">
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
